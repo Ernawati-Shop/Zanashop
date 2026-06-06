@@ -4,142 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ZanaShop - Promo Spesial</title>
-    <style>
-        /* RESET DASAR */
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            background: linear-gradient(135deg, #f0f2f5 0%, #dfe9f3 100%);
-            min-height: 100vh;
-            padding: 15px;
-            color: #333;
-            line-height: 1.5;
-        }
-
-        /* KOTAK UTAMA */
-        .container {
-            background: #ffffff;
-            padding: 25px 15px;
-            border-radius: 16px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            max-width: 700px;
-            margin: 0 auto;
-            text-align: center;
-            overflow: hidden;
-        }
-
-        /* HEADER */
-        .header { margin-bottom: 25px; }
-        
-        .logo {
-            width: 100px;
-            height: 100px;
-            object-fit: cover;
-            border-radius: 50%;
-            margin-bottom: 15px;
-            border: 3px solid #25D366;
-        }
-
-        h1 {
-            font-size: 22px;
-            color: #1a1a1a;
-            margin-bottom: 8px;
-            font-weight: 700;
-        }
-
-        .subtitle {
-            font-size: 14px;
-            color: #666;
-            margin-bottom: 20px;
-        }
-
-        /* JUDUL PROMO */
-        .promo-section { margin-bottom: 25px; }
-
-        .promo-title {
-            font-size: 18px;
-            color: #e53935;
-            font-weight: 800;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 2px dotted #eee;
-            display: inline-block;
-        }
-
-        /* GALERI GAMBAR - FLEX WRAP */
-        .gallery {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 12px;
-            padding: 5px;
-        }
-
-        .gallery-item {
-            flex: 0 0 calc(50% - 6px); /* 2 kolom di HP */
-            max-width: 50%;
-            position: relative;
-        }
-
-        @media (min-width: 500px) {
-            .gallery-item { flex: 0 0 calc(33.333% - 8px); } /* 3 kolom */
-            .gallery { gap: 15px; }
-        }
-
-        @media (min-width: 700px) {
-            .gallery-item { flex: 0 0 calc(25% - 12px); } /* 4 kolom */
-            .gallery { gap: 20px; }
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: auto;
-            display: block;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            transition: transform 0.2s;
-            /* Fallback background */
-            background-color: #f5f5f5;
-            min-height: 120px;
-        }
-
-        .gallery-item img:hover {
-            transform: scale(1.03);
-        }
-
-        /* TOMBOL WHATSAPP */
-        .wa-btn {
-            background: linear-gradient(90deg, #25D366 0%, #20BD5A 100%);
-            color: white;
-            padding: 14px 30px;
-            font-size: 16px;
-            font-weight: 700;
-            border: none;
-            border-radius: 30px;
-            cursor: pointer;
-            display: inline-block;
-            text-decoration: none;
-            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.35);
-            transition: all 0.2s;
-            margin-top: 15px;
-        }
-
-        .wa-btn:hover {
-            background: linear-gradient(90deg, #20BD5A 0%, #1DA150 100%);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 16px rgba(37, 211, 102, 0.5);
-        }
-
-        /* FOOTER */
-        .footer {
-            margin-top: 25px;
-            font-size: 12px;
-            color: #999;
-            padding-top: 15px;
-            border-top: 1px solid #f0f0f0;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -194,7 +59,7 @@
         </div>
 
         <!-- Tombol WhatsApp -->
-        <a href="javascript:void(0)" onclick="chatWA()" class="wa-btn">
+        <a href="#" onclick="chatWA(); return false;" class="wa-btn">
             💬 Beli via WhatsApp
         </a>
 
@@ -203,15 +68,7 @@
         </div>
     </div>
 
-    <script>
-        function chatWA() {
-            var nomor = "6285376168457";
-            var pesan = "Halo kak ZanaShop, saya tertarik dengan produk promo. Apakah stock masih ada?";
-            var url = "https://wa.me/" + nomor + "?text=" + encodeURIComponent(pesan);
-            window.open(url, '_blank');
-        }
-    </script>
+    <script src="script.js"></script>
 
 </body>
 </html>
-                
