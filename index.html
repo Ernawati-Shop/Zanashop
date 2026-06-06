@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toko Online Kami</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            background: white;
+            padding: 40px 20px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            max-width: 450px;
+            width: 90%;
+            text-align: center;
+        }
+
+        h1 { color: #333; font-size: 24px; margin: 20px 0 10px; }
+        p { color: #666; font-size: 14px; margin-bottom: 30px; }
+
+        .wa-button {
+            background-color: #25D366;
+            color: white;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            display: inline-block;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            transition: all 0.2s;
+        }
+
+        .wa-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- ======== MASUKKAN LINK LOGO HALAL DIBAWAH INI ======== -->
+        <img src="
+       https://awsimages.detik.net.id/community/media/visual/2022/03/15/kenapa-logo-halal-diganti-ada-perpindahan-wewenang-dari-mui-ke-kemenag.jpeg?w=650" alt="Logo Halal" style="width: 100px !important; height: auto; margin-bottom: 20px;">
+       
+        <h1>Selamat Datang di Toko Kami</h1>
+        <p>Pusat Belanja Aneka Obat & Kebutuhan Kesehatan Keluarga</p>
+
+        <button onclick="chatWhatsApp()" class="wa-button">
+            Beli Sekarang ➜
+        </button>
+    </div>
+
+    <script>
+        function chatWhatsApp() {
+            var nomorWA = "6285376168457";
+            var pesan = "Halo kak, saya mau tanya ketersediaan produk dan harga terbaru dong.";
+            var urlWA = "https://wa.me/" + nomorWA + "?text=" + encodeURIComponent(pesan);
+            window.open(urlWA, '_blank');
+        }
+    </script>
+
+</body>
+</html>
